@@ -12,10 +12,10 @@ variables:
   azureSubscription: '370e788b-379f-410c-bf89-8b85ba852936'
 
   # Web app name
-  webAppName: 'vx-landingpage'
+  webAppName: 'vx-landingpage-test'
 
   # Environment name
-  environmentName: 'vx-landingpage'
+  environmentName: 'vx-landingpage-test'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -57,7 +57,7 @@ stages:
         deploy:
           steps:
           - task: AzureRmWebAppDeployment@4
-            displayName: 'Azure App Service Deploy: vx-landingpage'
+            displayName: 'Azure App Service Deploy: vx-landingpage-test'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
